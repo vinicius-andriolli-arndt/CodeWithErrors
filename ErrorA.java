@@ -1,3 +1,5 @@
+package CodeWithErrors;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +11,7 @@ public class ErrorA {
         names.add("Jane");
         names.add("Mike");
 
-        for (int i = 0; i <= names.size(); i++) {
+        for (int i = 0; i < names.size(); i++) {
             String name = names.get(i);
             System.out.println("Name: " + name);
         }

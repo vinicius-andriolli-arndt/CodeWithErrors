@@ -1,4 +1,8 @@
-import java.util.*;
+package CodeWithErrors;
+
+import java.util.HashSet;
+import java.util.Scanner;
+import java.util.Set;
 
 public class ErrorD {
     public static void main(String[] args) {
@@ -21,7 +25,7 @@ public class ErrorD {
 
         Set<Integer> used = new HashSet<Integer>();
         for (int i = 0; i <= array.length - 1; i++) {
-            for (int j = i + 1; j <= array.length; j++) {
+            for (int j = i + 1; j < array.length; j++) {
                 if (array[i] + array[j] == 10 && !used.contains(array[i]) && !used.contains(array[j])) {
                     System.out.println("Dupla encontrada: " + array[i] + " e " + array[j]);
                     used.add(array[i]);
